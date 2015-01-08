@@ -59,4 +59,16 @@ int visit(tree_elem_type e)
 	return 1;
 }
 
-
+void sta_leaf_node(bi_tree t,int* num)
+{
+	if(t)
+	{
+		if(!t->lchild&&!t->rchild)
+		{
+			*num++;
+			return;
+		}		
+		sta_leaf_node(t->lchild,num);
+		sta_leaf_node(t->rchild,num);
+	}
+}
