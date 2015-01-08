@@ -22,5 +22,6 @@ int pre_order_traverse(bi_tree t,int (*visit)(tree_elem_type e));
 
 int visit(tree_elem_type);
 
+void sta_leaf_node(bi_tree t,int *num);
 
 #endif

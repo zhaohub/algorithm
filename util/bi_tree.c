@@ -65,7 +65,7 @@ void sta_leaf_node(bi_tree t,int* num)
 	{
 		if(!t->lchild&&!t->rchild)
 		{
-			*num++;
+			(*num)++;
 			return;
 		}		
 		sta_leaf_node(t->lchild,num);
