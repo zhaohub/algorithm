@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "queue.h"
+#include "../include/queue.h"
 
 bool init_queue(link_queue *q)
 {
