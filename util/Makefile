@@ -1,5 +1,3 @@
-OBJS=link_queue.o bi_tree.o linklist.o myarray.o
-
 
 link_queue.o : link_queue.c ../include/queue.h
 	cc -c link_queue.c
