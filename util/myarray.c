@@ -56,7 +56,8 @@ void main(int argc,char* argv[])
 	}
 	for(i=0;i<array->size;i++)
 	{
-		printf("%d\n",array->data[i]);
+		sleep(1);
+		printf("%d\t",array->data[i]);
 	}
 	free(array);
 }

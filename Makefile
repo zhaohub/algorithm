@@ -1,11 +1,11 @@
-main : main.o 
-	cc -o main main.o
+main : main.o util/bi_tree.o
+	cc -o main main.o util/bi_tree.o
 
-main.o : main.c tree.h 
-queue.o : include/queue.c include/queue.h
-	cc -c include/queue.c
-tt.o : tt.c
-	cc -c tt.c
+main.o : main.c include/tree.h 
+	cc -c main.c
+
+util/*:
+	make -C util;
 
 clean :
-	rm main tt.o queue.o
+	rm main main.o util/*.o 

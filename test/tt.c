@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-#include "include/queue.h"
+#include "../include/queue.h"
 
-//extern link_queue;
-//extern bool int_queue(link_queue *q);
+extern link_queue;
+extern int int_queue(link_queue *q);
 int main()
 {
 	link_queue q;
