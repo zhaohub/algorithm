@@ -9,7 +9,6 @@
 
 typedef int tree_elem_type;
 
-//tree node definition
 typedef struct bi_t_node_tag
 {
     tree_elem_type data;
@@ -17,7 +16,7 @@ typedef struct bi_t_node_tag
 
 } bi_t_node, *bi_tree;
 
-//recursive method for create binary tree
+
 int create_bi_tree(bi_tree *t)
 {
     int ch;
@@ -36,7 +35,6 @@ int create_bi_tree(bi_tree *t)
     return 1;
 }
 
-//recursive method for traverse binary tree
 int pre_order_traverse(bi_tree t, int (*visit)(tree_elem_type e))
 {
     if(t)
@@ -53,7 +51,7 @@ int pre_order_traverse(bi_tree t, int (*visit)(tree_elem_type e))
     }
     return 1;
 }
-//method for every tree node
+
 int visit(tree_elem_type e)
 {
     printf("%d\n", e);

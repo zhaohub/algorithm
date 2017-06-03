@@ -1,14 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef int  element_type;
-
-typedef struct dynamic_array_tag
-{
-    unsigned int size;
-    unsigned int capacity;
-    element_type data[1];
-} dynamic_array;
+#include "../include/dynamic_array.h"
 
 dynamic_array *create(unsigned int size)
 {
@@ -44,20 +37,3 @@ void push_back(dynamic_array **pp, element_type item)
     }
 }
 
-void main(int argc, char *argv[])
-{
-    dynamic_array *array = create(5);
-    //printf("%s------",argv[1]);
-    int num = atoi(argv[1]);
-    int i = 0;
-    for(; i < num; i++)
-    {
-        push_back(&array, i);
-    }
-    for(i = 0; i < array->size; i++)
-    {
-        sleep(1);
-        printf("%d\t", array->data[i]);
-    }
-    free(array);
-}

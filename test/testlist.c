@@ -1,27 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "../include/list.h"
 
-typedef struct node_s
-{
-    int item;
-    struct node_s *next;
-} node_t;
 
-node_t *reverse_list(node_t *head)
-{
-    node_t *n = head;
-    head = NULL;
-    while(n)
-    {
-        node_t *m = n;
-        n = n->next;
-        m->next = head;
-        head = m;
-    }
-    return head;
-}
-
-int main(void)
+int main(int argc,char* argv[])
 {
     int i;
     node_t *head = (node_t *)malloc(sizeof(node_t));

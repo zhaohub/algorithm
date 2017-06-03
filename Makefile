@@ -7,5 +7,8 @@ main.o : main.c include/tree.h
 util/*:
 	make -C util;
 
+test/*:
+	make -C test;
+
 clean :
 	rm main main.o util/*.o 

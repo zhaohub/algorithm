@@ -4,9 +4,9 @@
  *email:zg3407@email.com
  *date:2015-1-6
  */
-
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "../include/queue.h"
 
 int init_queue(link_queue *q)
@@ -34,7 +34,7 @@ int queue_empty(link_queue q)
     return 0;
 }
 
-//insert an element to the queue's rear
+
 int en_queue(link_queue *q, queue_elem_type e)
 {
     queue_node *node = (queue_node *)malloc(sizeof(queue_node));
@@ -46,7 +46,7 @@ int en_queue(link_queue *q, queue_elem_type e)
     return 1;
 }
 
-//delete and elememnt from the front of the queue
+
 int de_queue(link_queue *q, queue_elem_type *e)
 {
     if(queue_empty(*q)) return 0;

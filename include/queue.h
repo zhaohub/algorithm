@@ -4,7 +4,6 @@
  *email:zg3407@gmail.com
  *date:2015-1-6
  */
-
 #ifndef _QUEUE_H
 #define _QUEUE_H
 
@@ -27,7 +26,6 @@ int destory_queue(link_queue *q);
 int queue_empty(link_queue q);
 
 int en_queue(link_queue *q, queue_elem_type e);
-
 int de_queue(link_queue *q, queue_elem_type *e);
 
 #endif
