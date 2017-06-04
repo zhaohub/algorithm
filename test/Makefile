@@ -1,16 +1,19 @@
-all : testcoroutine testdynamicarray testlist testqueue
+all : commontest testcoroutine testdynamicarray testlist testqueue
+
+commontest : commontest.o testfun.o
+	$(CC) $(CFLAGS) -o $@ $^
 
 testcoroutine : testcoroutine.o 
-	cc -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 testdynamicarray : testdynamicarray.o ../util/dynamic_array.o
-	cc -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 testlist : testlist.o ../util/link_list.o
-
-	cc -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
+	
 testqueue : testqueue.o ../util/link_queue.o
-	cc -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean : 
 	-rm *.o testcoroutine testdynamicarray testlist testqueue

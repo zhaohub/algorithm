@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#include "../include/test.h"
-
 typedef struct bi_tree_tag
 {
     int data;
@@ -15,13 +13,16 @@ void change_val(char **p)
     return;
 }
 
-int test(int a){
-   static int test = 0;
-   if(a == 0)
+int test(int a)
+{
+    static int test = 0;
+    if(a == 0)
         test = 1;
 
     return test;
 }
+
+extern int testfun(int a, int b);
 
 void main(void)
 {
@@ -35,5 +36,7 @@ void main(void)
     printf("%d\n", test(-1));
     printf("%d\n", test(0));
     printf("%d\n", test(-1));
-    test1();
+
+    printf("%d\n", testfun(8, 9));
+
 }

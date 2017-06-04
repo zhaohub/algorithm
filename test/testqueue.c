@@ -2,8 +2,12 @@
 
 #include "../include/queue.h"
 
-extern link_queue;
-extern int int_queue(link_queue *q);
+int testfun(int a, int b)
+{
+
+    return a + b;
+}
+
 int main()
 {
     link_queue q;
