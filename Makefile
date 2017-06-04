@@ -1,18 +1,22 @@
 CC ?= gcc
-CFLAGS ?= -Wall -O2
+CFLAGS ?= -g -Wall -O2
+SHARED := -fPIC --shared
 
+export CC CFLAGS SHARED
 
-all: 
-	(cd util; make)
-	(cd test; make)
-	(make main)
+SUBDIRS = util test
 
+all : main $(SUBDIRS)
+ 
 main : main.o util/bi_tree.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-main.o : main.c include/tree.h 
-	$(CC) $(CFLAGS) -c $<
-	
+$(SUBDIRS) : ECHO
+	+$(MAKE) -C $@
+
+ECHO : 
+	@echo begin compile
+
 .PHONY :
 clean :
 	(cd util;make clean)

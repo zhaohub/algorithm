@@ -24,7 +24,7 @@ int test(int a)
 
 extern int testfun(int a, int b);
 
-void main(void)
+int main(void)
 {
     /*char val[3] = {1, 2, 3};
     char *p = val;
@@ -38,5 +38,6 @@ void main(void)
     printf("%d\n", test(-1));
 
     printf("%d\n", testfun(8, 9));
+    return 0;
 
 }

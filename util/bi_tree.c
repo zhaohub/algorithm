@@ -21,7 +21,8 @@ int create_bi_tree(bi_tree *t)
 {
     int ch;
     printf("intput a digit:\n");
-    scanf("%d", &ch);
+    if(!scanf("%d", &ch))
+        return 0;
     if(ch == 0) *t = NULL;
     else
     {

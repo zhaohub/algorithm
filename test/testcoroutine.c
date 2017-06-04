@@ -16,6 +16,7 @@ int cofunc1(void)
         }
     }
     crFinish;
+    return 0;
 }
 
 
@@ -33,6 +34,7 @@ int cofunc2(void)
     }
 
     crFinish;
+    return 0;
 }
 
 

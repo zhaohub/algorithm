@@ -3,4 +3,5 @@
 !*/
 *.out
 *.o
+*.so
 /DS_Store

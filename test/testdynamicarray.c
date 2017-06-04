@@ -3,7 +3,7 @@
 
 #include "../include/dynamic_array.h"
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     dynamic_array *array = create(5);
     //printf("%s------",argv[1]);
@@ -18,4 +18,5 @@ void main(int argc, char *argv[])
         printf("%d\t", array->data[i]);
     }
     free(array);
+    return 0;
 }
