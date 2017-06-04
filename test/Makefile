@@ -16,4 +16,4 @@ testqueue : testqueue.o ../util/link_queue.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean : 
-	-rm *.o testcoroutine testdynamicarray testlist testqueue
+	-rm *.o testcoroutine testdynamicarray testlist testqueue commontest
