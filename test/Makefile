@@ -1,4 +1,4 @@
-all : commontest testcoroutine testdynamicarray testlist testqueue
+all : commontest testcoroutine testdynamicarray testlist testqueue testpointer
 
 commontest : commontest.o testfun.o
 	$(CC) $(CFLAGS) -o $@ $^
@@ -15,5 +15,8 @@ testlist : testlist.o ../util/link_list.o
 testqueue : testqueue.o ../util/link_queue.o
 	$(CC) $(CFLAGS) -o $@ $^
 
+testpointer : testpointer.o
+	$(CC) $(CFLAGS) -o $@ $^
+
 clean : 
-	-rm *.o testcoroutine testdynamicarray testlist testqueue commontest
+	-rm *.o testcoroutine testdynamicarray testlist testqueue commontest testpointer
